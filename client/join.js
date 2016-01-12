@@ -8,9 +8,6 @@ Template.Join.events({
     'click #btnJoin': function(evt, tmpl) {
         var email = $("#inputEmail3").val()
         var pw = $('#inputPassword3').val()
-        console.log(email);
-        console.log(pw);
-
         options = {};
         options.username = email;
         options.email = email;
@@ -37,3 +34,8 @@ Template.Join.events({
         //else return '사용자 생성 완료'
     }
 });
+if (self.name != 'reload') {
+    self.name = 'reload';
+    self.location.reload(true);
+}
+else self.name = '';
