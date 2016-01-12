@@ -1,0 +1,32 @@
+<head>
+    <title>MyWebpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<template name="layout">
+    <div class="container-fluid">
+        <div id="jb-container">
+            <div id="jb-header">
+                <a href="/"><img src="ban.jpg"></a>
+            </div>
+            <div id="jb-content">
+                {{>yield}}
+            </div>
+            <div id="jb-sidebar">
+                <img src="dbsgh.jpg" alt="이미지를 불러오지 못하였습니다." width="170" height="170" class="img-circle">
+                <h1>Hello!!</h1>
+                <h2>this is my website</h2>
+                <div class="header">
+                    {{>header}}
+                </div>
+            </div>
+            <footer>
+                <div id="jb-footer">
+                    <a href="https://github.com/dbflwla">github</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                    <a href="tel:010-9832-0617" class="call">call</a>&nbsp;&nbsp;/&nbsp;&nbsp;
+                    ◎created by yunho Choi◎
+                </div>
+            </footer>
+        </div>
+    </div>
+</template>

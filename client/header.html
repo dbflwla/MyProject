@@ -1,0 +1,20 @@
+<template name="header">
+    <ul class="nav navbar-nav navbar-right">
+        <!--{{> loginButtons}} &lt;!&ndash; here &ndash;&gt;-->
+        {{#if currentUser}}
+            <div class="login">
+                <!--//로그인 되어 있을-->
+                {{email}}
+                <button class="btn btn-default" name="Logout">Logout</button>
+                <button class="btn btn-default"><a href="/Likes">Like</a></button>
+            </div>
+        {{else}}
+            <!--로그인이 안되어 있을때-->
+            <input type="text" name="ID" class="form-control" id="exampleInputEmail3" placeholder="Enter email" width="200px"/>
+            <input type="password" name="PW" class="form-control" id="exampleInputPassword3" placeholder="Password" width="200px"/>
+            <Button name="Login" class="btn btn-default">Login</Button>
+            <Button name="Join" class="btn btn-default">Join</Button>
+            {{> Join}}
+        {{/if}}
+    </ul>
+</template>
